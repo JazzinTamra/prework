@@ -10,5 +10,4 @@ _END;
 fclose($fh);
 echo "File 'testfile.txt' written successfully";
 
-if (file_exists("testfile.txt")) echo "File exists";
 ?>
