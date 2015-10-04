@@ -1,5 +1,5 @@
 <?php //Chapter 7 using print f
-printf("There are %b items in you basket", 5)
+printf("There are %f items in you basket", 5)
 
 
 ?>
