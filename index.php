@@ -1,8 +1,14 @@
-<?php
-$month = 9;  //September (only has 30 days)
-$day = 31; //31st
-$year = 2018; //2018
+<?php //testfile.php
+$fh = fopen("testfile.txt", 'w') or die("Failed to create file");
 
-if (checkdate($month, $day, $year)) echo "Date is valid";
-else echo "Date is invalid";
+$text = <<<_END
+Line 1
+Line 2
+Line3
+_END;
+ fwrite($fh, $text) or die("Could not write to file");
+fclose($fh);
+echo "File 'testfile.txt' written successfully";
+
+if (file_exists("testfile.txt")) echo "File exists";
 ?>
