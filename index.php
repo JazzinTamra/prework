@@ -1,13 +1,14 @@
-<?php //testfile.php
-$fh = fopen("testfile.txt", 'w') or die("Failed to create file");
+<?php //exec.pho
+$cmd = "dir"; //Windows
+// $cmd = "ls";// Linux, Unix & Mac
 
-$text = <<<_END
-Line 1
-Line 2
-Line3
-_END;
- fwrite($fh, $text) or die("Could not write to file");
-fclose($fh);
-echo "File 'testfile.txt' written successfully";
+exec(escapeshellcmd($cmd), $output, $status);
+
+if ($status) echo "Exec command failed";
+else{
+	echo "<pre>";
+	foreach($output as $line) echo htmlspecialchars("$line/n");
+	echo "</pre>";
+}
 
 ?>
