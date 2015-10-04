@@ -7,7 +7,7 @@ exec(escapeshellcmd($cmd), $output, $status);
 if ($status) echo "Exec command failed";
 else{
 	echo "<pre>";
-	foreach($output as $line) echo htmlspecialchars("$line/n");
+	foreach($output as $line) echo htmlspecialchars("$line<br>");
 	echo "</pre>";
 }
 
