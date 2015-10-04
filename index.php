@@ -1,14 +1,5 @@
-<?php //exec.pho
-$cmd = "dir"; //Windows
-// $cmd = "ls";// Linux, Unix & Mac
+<?php //Chapter 7 using print f
+printf("There are %b items in you basket", 5)
 
-exec(escapeshellcmd($cmd), $output, $status);
-
-if ($status) echo "Exec command failed";
-else{
-	echo "<pre>";
-	foreach($output as $line) echo htmlspecialchars("$line/n");
-	echo "</pre>";
-}
 
 ?>
